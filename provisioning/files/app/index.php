@@ -2,10 +2,12 @@
   $config = require(__DIR__ . '/config.php');
 
   function db_status($config) {
-    $connection = mysqli_connect(
+    $sql = new mysqli; 
+    $sql->options(MYSQLI_OPT_CONNECT_TIMEOUT, 5);
+    $connection = $sql->real_connect(
       $config['db_host'],
       $config['db_user'],
-      $config['mysql_password']
+      $config['db_password']
     );
     return $connection ? 'ok' : 'error'; 
   } 
