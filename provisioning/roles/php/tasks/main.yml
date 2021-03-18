@@ -1,0 +1,19 @@
+- name: Install PHP
+  apt:
+    package:
+      - php{{ php_fpm.version }}
+      - php{{ php_fpm.version }}-common
+      - php{{ php_fpm.version }}-fpm
+      - php{{ php_fpm.version }}-mysql
+    state: present
+    update_cache: yes
+  become: true
+- name: Create a PHP upstream for NGINX
+  copy:
+    dest: /etc/nginx/conf.d/php{{ php_fpm.version }}-upstream.conf
+    content: |
+      upstream php{{ php_fpm.version }} {
+          server unix:/run/php/php{{ php_fpm.version }}-fpm.sock;
+      }
+  become: true
+  notify: restart nginx

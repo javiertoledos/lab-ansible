@@ -1,0 +1,31 @@
+- hosts: webservers
+  vars:
+    app_folder: /var/www/app
+    php_fpm:
+      version: 7.2
+    database:
+      user: example
+      password: example
+      host: localhost
+  roles:
+    - nginx
+    - php
+    - nginx-site
+  tasks: 
+    - name: Copy app into server
+      ansible.builtin.copy:
+        src: app/
+        dest: "{{ app_folder }}"
+        owner: vagrant
+        group: vagrant
+        mode: '0644'
+      become: true
+    - name: Create nginx site configuration
+      template:
+        src: config.php.j2
+        dest: "{{ app_folder }}/config.php"
+        owner: vagrant
+        group: vagrant
+        mode: '0644'
+        force: yes
+    

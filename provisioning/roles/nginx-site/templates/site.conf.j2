@@ -1,0 +1,14 @@
+server {
+  listen {{ http_port }};
+  server_name _;
+  root {{ app_folder }};
+  index index.php;
+  location / {
+    try_files $uri $uri/ /index.php?$args;
+  }
+
+  location ~ \.php$ {
+    include fastcgi.conf;
+    fastcgi_pass php{{ php_fpm.version }};
+  }
+}
