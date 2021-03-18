@@ -9,7 +9,7 @@
       host: localhost
   roles:
     - nginx
-    - php
+    - php-nginx
     - nginx-site
   tasks: 
     - name: Copy app into server
