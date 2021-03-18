@@ -210,7 +210,9 @@ específica para ellas definida en el archivo `provisioning/playbook.yml`.
 2. Agrega una nueva máquina virtual que sea una base de datos y provisionala con
    mysql. A continuación hay algunos consejos que puedes tomar en cuenta:
     * Existe un repositorio de roles ya creados para Ansible llamado 
-    *Ansible Galaxy*, en el puedes encontrar roles que ya instalan Mysql.
+    *Ansible Galaxy*, en él puedes encontrar roles que ya instalan Mysql. Revisa
+    la documentación de Vagrant y la de Ansible Galaxy para especificar el 
+    archivo donde se definen estas dependencias y el folder donde se instalarán.
     * Para diferenciar entre los webservers y la base de datos, la recomendación
     es crear un nuevo grupo en la configuración de ansible.
     * Para conectar las máquinas virtuales entre ellas, deberás agregar una 
