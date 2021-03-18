@@ -177,7 +177,8 @@ http://localhost:8082.
 
 Ansible utiliza un archivo de inventario que permite definir cuales son los 
 hosts a los que debe conectarse (vía ssh). Este inventario puede definirse como
-un archivo yaml que luce similar a este:
+un archivo yaml que luce similar a este (no es necesario colocarlo en el 
+laboratorio):
 
 ```yaml
 all:
