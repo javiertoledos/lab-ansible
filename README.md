@@ -30,6 +30,7 @@ en un archivo de configuración de Vagrant. Puedes realizar el
 [laboratorio introductorio a Vagrant](https://javiertoledos.github.io/lab-vagrant/)
 para aprender un poco sobre este primero. 
 
+Para este laboratorio descarga y descomprime el contenido de [este repositorio](https://github.com/javiertoledos/lab-ansible/archive/master.zip). 
 La estructura del laboratorio se plantea de la siguiente manera:
 
 ```
@@ -220,7 +221,7 @@ específica para ellas definida en el archivo `provisioning/playbook.yml`.
     * Si la comunicación tiene éxito podrás ver el siguiente mensaje al visitar
       los web servers con alguna de las urls anteriores:
     ![](images/db-example.png)    
-3. Crea un archivo respuestas.txt y responde las siguientes preguntas:
+3. Crea un archivo `respuestas.txt` y responde las siguientes preguntas:
   * Investiga en términos de devops cuál es la diferencia entre el paradigma
     declarativo e imperativo y describe que ventajas tiene utilizar una 
     herramienta como Ansible en vez de utilizar scripts de shell o hacerlo 
@@ -228,7 +229,7 @@ específica para ellas definida en el archivo `provisioning/playbook.yml`.
   * En los roles incluidos en este proyecto se utilizó una tarea que installa las
     dependencias utilizando aptitude (apt-get). Investiga que otros gestores de
     paquetes hay en las diferentes distribuciones de Linux.
-5. Crea un archivo zip con el nombre `lab-vagrant-<numero de carne>.zip`. Es
+5. Crea un archivo zip con el nombre `lab-ansible-<numero de carne>.zip`. Es
   requerido respetar este nombre ya que se evaluará con una herramienta
   automática el laboratorio y en caso de no seguir instrucciones, no se evaluará
   la respuesta.
