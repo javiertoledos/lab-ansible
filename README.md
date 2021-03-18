@@ -215,7 +215,12 @@ específica para ellas definida en el archivo `provisioning/playbook.yml`.
     la documentación de Vagrant y la de Ansible Galaxy para especificar el 
     archivo donde se definen estas dependencias y el folder donde se instalarán.
     * Para diferenciar entre los webservers y la base de datos, la recomendación
-    es crear un nuevo grupo en la configuración de ansible.
+    es crear un nuevo grupo en la configuración de ansible. Para cada grupo de
+    servidores puedes configurar sus propias variables, asegurate que para el 
+    servidor de base de datos, coloques las variables que necesita para que se
+    pueda crear el usuario y contraseña correctos para conectarse. Un buen lugar
+    para buscar como configurar un rol de Ansible es buscando el archivo de 
+    valores por defecto en `<carpeta-del-rol>/defaults/main.yml`.
     * Para conectar las máquinas virtuales entre ellas, deberás agregar una 
     segunda interfase de red que sea de tipo privado (preferible) o bridge.
     * Deberás configurar las variables adecuadamente  en el archivo de 
