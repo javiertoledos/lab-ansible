@@ -57,7 +57,7 @@ servidor web1 y la cual se provisiona utilizando un [Playbook](https://docs.ansi
 (playbook.yml) de Ansible. Un Playbook es básicamente un conjunto de archivos
 YAML que definen el estado y configuración deseados para configurar una máquina.
 
-Los playbooks pueden estar dividios en tareas y roles. Las tareas son las 
+Los playbooks pueden estar divididos en tareas y roles. Las tareas son las 
 definiciones de lo que se requiere realizar en una máquina, por ejemplo copiar
 un archivo, aplicar una plantilla con variables como un archivo de configuración 
 o definir servicios a instalar utilizando el gestor de paquetes del sistema 
@@ -130,7 +130,7 @@ Esto indica que se ejecutaron las distintas tareas y roles del playbook para
 instalar nuestra aplicación de PHP en la máquina virtual. 
 
 La configuración con la que viene la aplicación deberá levantar una máquina 
-virtual con un servidor web que se puede visitar en http://localhost:8081. 
+virtual con un servidor web que se puede visitar en http://localhost:8080. 
 Si todo se ejecutó correctamente, deberá verse lo siguiente al visitar la url:
 
 ![](images/app-example.png)
@@ -234,7 +234,7 @@ específica para ellas definida en el archivo `provisioning/playbook.yml`.
       declarativo e imperativo y describe que ventajas tiene utilizar una 
       herramienta como Ansible en vez de utilizar scripts de shell o hacerlo 
       manualmente.
-    * En los roles incluidos en este proyecto se utilizó una tarea que installa 
+    * En los roles incluidos en este proyecto se utilizó una tarea que instala 
       las dependencias utilizando aptitude (apt-get). Investiga que otros 
       gestores de paquetes hay en las diferentes distribuciones de Linux.
 5. Crea un archivo zip con el nombre `lab-ansible-<numero de carne>.zip`. Es
